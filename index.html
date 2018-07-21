@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Rock Paper Scissors</title>
+</head>
+<body>
+  <script>
+    let userChoice = function userPlay() {
+      prompt("Rock, Paper, or Scissors?").toUpperCase();
+    }
+    let computerChoice = function computerPlay() {
+      return Math.floor(Math.random() * (3) + 1);
+      if (computerChoice == 1) {
+        computerChoice = "ROCK";
+      }   else if (computerChoice == 2) {
+            computerChoice = "PAPER";
+        }
+          else {
+            computerChoice = "SCISSORS";
+        }
+    }
+    let rpsgame = function (computerChoice, userChoice) {
+      if (userChoice == "ROCK") {
+        if (computerChoice == "ROCK") {
+          return "You chose Rock, Computer chose Rock, Tie";
+        }
+        else if (computerChoice == "PAPER") {
+          return "You chose Rock, Computer choseou Paper, You lose!";
+        }
+        else if (computerChoice == "SCISSORS") {
+          return "You chose Rock, Computer chose Scissors, You win!";
+        }
+      }
+      if (userChoice == "PAPER") {
+        if (computerChoice == "ROCK") {
+          return "You chose Paper, Computer chose Rock, You win!";
+        }
+        else if (computerChoice == "PAPER") {
+          return "You chose Paper, Computer chose Paper, Tie";
+        }
+        else if (computerChoice == "SCISSORS") {
+          return "You chose Paper, Computer chose Scissors, You lose!";
+        }
+      }
+      if (userChoice == "SCISSORS") {
+        if (computerChoice == "ROCK") {
+          return "You chose Scissors, Computer chose Rock, You lose!";
+        }
+        else if (computerChoice == "PAPER") {
+          return "You chose Scissors, Computer chose Paper, You win!";
+        }
+        else if (computerChoice == "SCISSORS") {
+          return "You chose Scissors, Computer chose Scissors, Tie";
+        }
+      }
+    }
+    console.log(rpsgame);
+  </script>
+</body>
+</html>
