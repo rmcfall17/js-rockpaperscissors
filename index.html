@@ -6,9 +6,7 @@
 </head>
 <body>
   <script>
-    let userChoice = function userPlay() {
-      prompt("Rock, Paper, or Scissors?").toUpperCase();
-    }
+    let userChoice = prompt("Rock, Paper, or Scissors?").toUpperCase();
     let computerChoice = function computerPlay() {
       return Math.floor(Math.random() * (3) + 1);
       if (computerChoice == 1) {
