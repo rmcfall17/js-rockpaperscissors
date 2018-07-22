@@ -6,11 +6,6 @@
 </head>
 <body>
   <script>
-    function playgame() {
-      let userChoice = prompt("Rock, Paper, or Scissors?").toUpperCase();
-      let computerChoice = computerPlay();
-      console.log(rpsgame(computerPlay, userChoice));
-    }
     function computerPlay() {
       const rnd = Math.floor(Math.random() * (3) + 1);
       if (rnd == 1) {
@@ -55,6 +50,11 @@
         else if (computerPlay == "SCISSORS") {
           return "You chose Scissors, Computer chose Scissors, Tie";
         }
+      }
+      function playgame() {
+        let userChoice = prompt("Rock, Paper, or Scissors?").toUpperCase();
+        let computerChoice = computerPlay();
+        console.log(rpsgame(computerPlay, userChoice));
       }
     }
   </script>
