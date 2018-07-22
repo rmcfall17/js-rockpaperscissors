@@ -12,14 +12,14 @@
       console.log(rpsgame(computerPlay, userChoice));
     }
     function computerPlay() {
-      return Math.floor(Math.random() * (3) + 1);
-      if (computerPlay == 1) {
-        computerPlay = "ROCK";
-      }   else if (computerPlay == 2) {
-            computerPlay = "PAPER";
+      const rnd = Math.floor(Math.random() * (3) + 1);
+      if (rnd == 1) {
+        return = "ROCK";
+      }   else if (rnd == 2) {
+            return = "PAPER";
         }
           else {
-            computerPlay = "SCISSORS";
+            return = "SCISSORS";
         }
     }
     function rpsgame(computerPlay, userChoice) {
