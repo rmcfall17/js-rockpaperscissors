@@ -6,11 +6,6 @@
 </head>
 <body>
   <script>
-  const playNames = {
-    0: 'ROCK',
-    1: 'PAPER',
-    2: 'SCISSORS'
-  }
   function playgame() {
     let userChoice = prompt("Rock, Paper, or Scissors?").toUpperCase();
     let computerChoice = computerPlay();
@@ -18,38 +13,43 @@
     }
   function computerPlay() {
     Math.floor(Math.random() * (3));
+    const playNames = {
+      0: 'ROCK',
+      1: 'PAPER',
+      2: 'SCISSORS'
+    }
   }
   function rpsgame(computerChoice, userChoice) {
     if (userChoice == "ROCK") {
      if (computerChoice[playNames] == "ROCK") {
        return "You chose Rock, Computer chose Rock, Tie";
      }
-     else if (computerChoice[playNames] == "PAPER") {
+     else if (computerChoice == "PAPER") {
        return "You chose Rock, Computer choseou Paper, You lose!";
      }
-     else if (computerChoice[playNames] == "SCISSORS") {
+     else if (computerChoice == "SCISSORS") {
        return "You chose Rock, Computer chose Scissors, You win!";
      }
     }
     if (userChoice == "PAPER") {
-     if (computerChoice[playNames] == "ROCK") {
+     if (computerChoice == "ROCK") {
        return "You chose Paper, Computer chose Rock, You win!";
      }
-     else if (computerChoice[playNames] == "PAPER") {
+     else if (computerChoice == "PAPER") {
        return "You chose Paper, Computer chose Paper, Tie";
      }
-     else if (computerChoice[playNames] == "SCISSORS") {
+     else if (computerChoice == "SCISSORS") {
        return "You chose Paper, Computer chose Scissors, You lose!";
      }
     }
     if (userChoice == "SCISSORS") {
-     if (computerChoice[playNames] == "ROCK") {
+     if (computerChoice == "ROCK") {
        return "You chose Scissors, Computer chose Rock, You lose!";
      }
-     else if (computerChoice[playNames] == "PAPER") {
+     else if (computerChoice == "PAPER") {
        return "You chose Scissors, Computer chose Paper, You win!";
      }
-     else if (computerChoice[playNames] == "SCISSORS") {
+     else if (computerChoice == "SCISSORS") {
        return "You chose Scissors, Computer chose Scissors, Tie";
      }
     }
