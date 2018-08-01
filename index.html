@@ -12,14 +12,15 @@
     console.log(rpsgame(computerChoice, userChoice));
     }
   function computerPlay() {
-    Math.floor(Math.random() * (3));
-    const playNames = {
-      0: "ROCK",
-      1: "PAPER",
-      2: "SCISSORS"
+    const rnd = Math.floor(Math.random() * (3));
+    if (rnd === 0) {
+      return "ROCK";
+    } else if (rnd === 1) {
+      return "PAPER";
+    } else {
+        return "SCISSORS";
     }
-    return playNames;
-  }
+    }
   function rpsgame(computerChoice, userChoice) {
     if (userChoice == "ROCK") {
      if (computerChoice == "ROCK") {
