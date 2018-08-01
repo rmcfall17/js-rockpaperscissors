@@ -6,6 +6,8 @@
 </head>
 <body>
   <script>
+  let computerPoints = 0;
+  let userPoints = 0;
   function computerPlay() {
     const rnd = Math.floor(Math.random() * (3));
     if (rnd === 0) {
@@ -22,28 +24,34 @@
        return "You chose Rock, Computer chose Rock, Tie";
      }
      else if (computerChoice == "PAPER") {
-       return "You chose Rock, Computer choseou Paper, You lose!";
+       computerPoints += 1;
+       return "You chose Rock, Computer chose Paper, You lose!";
      }
      else if (computerChoice == "SCISSORS") {
+       userPoints += 1;
        return "You chose Rock, Computer chose Scissors, You win!";
      }
     }
     if (userChoice == "PAPER") {
      if (computerChoice == "ROCK") {
+       userPoints += 1;
        return "You chose Paper, Computer chose Rock, You win!";
      }
      else if (computerChoice == "PAPER") {
        return "You chose Paper, Computer chose Paper, Tie";
      }
      else if (computerChoice == "SCISSORS") {
+       computerPoints += 1;
        return "You chose Paper, Computer chose Scissors, You lose!";
      }
     }
     if (userChoice == "SCISSORS") {
      if (computerChoice == "ROCK") {
+       computerPoints += 1;
        return "You chose Scissors, Computer chose Rock, You lose!";
      }
      else if (computerChoice == "PAPER") {
+       userPoints += 1;
        return "You chose Scissors, Computer chose Paper, You win!";
      }
      else if (computerChoice == "SCISSORS") {
@@ -54,6 +62,14 @@
   function playgame() {
     let userChoice = prompt("Rock, Paper, or Scissors?").toUpperCase();
     let computerChoice = computerPlay();
+    function game(userPoints, computerPoints) {
+      if (computerPoints == 3) {
+        console.log("Computer won best of 5, Game Over!");
+      }
+      else if (userPoints == 3) {
+        console.log("You won best of 5, Congrats!");
+      }
+    }
     console.log(rpsgame(computerChoice, userChoice));
   }
   </script>
