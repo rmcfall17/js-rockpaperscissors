@@ -59,17 +59,17 @@
      }
     }
   }
+  function game(userPoints, computerPoints) {
+    if (computerPoints == 3) {
+      console.log("Computer won best of 5, Game Over!");
+    }
+    else if (userPoints == 3) {
+      console.log("You won best of 5, Congrats!");
+    }
+  }
   function playgame() {
     let userChoice = prompt("Rock, Paper, or Scissors?").toUpperCase();
     let computerChoice = computerPlay();
-    function game(userPoints, computerPoints) {
-      if (computerPoints == 3) {
-        console.log("Computer won best of 5, Game Over!");
-      }
-      else if (userPoints == 3) {
-        console.log("You won best of 5, Congrats!");
-      }
-    }
     console.log(rpsgame(computerChoice, userChoice));
   }
   </script>
